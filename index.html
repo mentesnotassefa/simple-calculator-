@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modern Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <div id="calculator">
-    <input type="display" id="display" readonly>
-    <div id="keys">
-        <button onclick="appendTo('+')" class="operator-btn">+</button>
-        <button onclick="appendTo('7')">7</button>
-        <button onclick="appendTo('8')">8</button>
-        <button onclick="appendTo('9')">9</button>
-        <button onclick="appendTo('-')" class="operator-btn">-</button>
-        <button onclick="appendTo('4')">4</button>
-        <button onclick="appendTo('5')">5</button>
-        <button onclick="appendTo('6')">6</button>
-        <button onclick="appendTo('*')" class="operator-btn">*</button>
-        <button onclick="appendTo('1')">1</button>
-        <button onclick="appendTo('2')">2</button>
-        <button onclick="appendTo('3')">3</button>
-        <button onclick="appendTo('/')" class="operator-btn">/</button>
-        <button onclick="appendTo('0')">0</button>
-        <button onclick="appendTo('.')">.</button>
-        <button onclick="calculate('=')">=</button>
-        <button onclick="cleanDisplay('C')" class="operator-btn">C</button>
+   
+    <div id="calculator">
+        <div id="history"></div>
+        <input type="text" id="display" readonly>
+        <div id="keys">
+            <button onclick="cleanDisplay()" class="operator-btn">C</button>
+            <button onclick="backspace()" class="operator-btn">←</button>
+            <button onclick="appendTo('(')" class="operator-btn">(</button>
+            <button onclick="appendTo(')')" class="operator-btn">)</button>
+            <button onclick="appendTo('7')">7</button>
+            <button onclick="appendTo('8')">8</button>
+            <button onclick="appendTo('9')">9</button>
+            <button onclick="appendTo('/')" class="operator-btn">÷</button>
+            <button onclick="appendTo('4')">4</button>
+            <button onclick="appendTo('5')">5</button>
+            <button onclick="appendTo('6')">6</button>
+            <button onclick="appendTo('*')" class="operator-btn">×</button>
+            <button onclick="appendTo('1')">1</button>
+            <button onclick="appendTo('2')">2</button>
+            <button onclick="appendTo('3')">3</button>
+            <button onclick="appendTo('-')" class="operator-btn">-</button>
+            <button onclick="appendTo('0')">0</button>
+            <button onclick="appendTo('.')">.</button>
+            <button onclick="appendTo('%')" class="operator-btn">%</button>
+            <button onclick="calculate()" class="equals-btn">=</button>
+        </div>
     </div>
-   </div>
-   <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
